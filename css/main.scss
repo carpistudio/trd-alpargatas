@@ -31,6 +31,18 @@ main {
     background-color: $blue;
 }
 
+.main-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        width: 10rem;
+        max-width: 100%;
+    }
+}
+
 .step-form {
     display: flex;
     flex-direction: column;
@@ -208,10 +220,12 @@ main {
                     padding-right: 0;
                     border: 2px solid $blue;
                     border-radius: 100vmax;
+                    appearance: textfield;
                     -moz-appearance: textfield;
 
                     &::-webkit-outer-spin-button,
                     &::-webkit-inner-spin-button {
+                        appearance: none;
                         -webkit-appearance: none;
                         margin: 0;
                     }

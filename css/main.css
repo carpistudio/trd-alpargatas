@@ -34,6 +34,27 @@ main {
   background-color: #1b2446;
 }
 
+.main-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-form .logo {
+  width: 10rem;
+  max-width: 100%;
+}
+
 .step-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,10 +289,13 @@ main {
   padding-right: 0;
   border: 2px solid #1b2446;
   border-radius: 100vmax;
+  -webkit-appearance: textfield;
+          appearance: textfield;
   -moz-appearance: textfield;
 }
 
 .step-form .elegi-productos-container .cantidades .talles input::-webkit-outer-spin-button, .step-form .elegi-productos-container .cantidades .talles input::-webkit-inner-spin-button, .step-form .elegi-productos-container .cantidades .color input::-webkit-outer-spin-button, .step-form .elegi-productos-container .cantidades .color input::-webkit-inner-spin-button {
+  appearance: none;
   -webkit-appearance: none;
   margin: 0;
 }
