@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+.visually-hidden {
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  background-color: #1b2446;
+}
+
+.step-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: .5rem;
+  border-radius: 1.2rem;
+  padding: 1.2rem 2rem;
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.step-form .step-number {
+  position: absolute;
+  left: -1rem;
+  top: -1.5rem;
+  color: white;
+  background: #1b2446;
+  border: 4px solid #851a32;
+  font-size: .8rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: .5rem 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 100vmax;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.step-form.step-hidden {
+  display: none;
+}
+
+.step-form .step-title {
+  font-size: 1.6rem;
+  color: #1b2446;
+}
+
+.step-form .step-desc {
+  color: #1b2446;
+}
+
+.step-form .tipo-de-entrega-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.step-form .tipo-de-entrega-container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  border: 4px solid #1b2446;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #1b2446;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+.step-form .tipo-de-entrega-container label:hover {
+  background-color: #851a32;
+}
+
+.step-form .tipo-de-entrega-container label i {
+  font-size: 3rem;
+}
+
+.step-form .tipo-de-entrega-container label p {
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.step-form .tipo-de-entrega-container input:checked + label {
+  background-color: #851a32;
+}
+
+.step-form .completa-tus-datos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.step-form .completa-tus-datos-container input, .step-form .completa-tus-datos-container select {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 100vmax;
+  border: 2px solid #1b2446;
+}
+
+.step-form .completa-tus-datos-container input:focus, .step-form .completa-tus-datos-container input:active, .step-form .completa-tus-datos-container input:focus-visible, .step-form .completa-tus-datos-container select:focus, .step-form .completa-tus-datos-container select:active, .step-form .completa-tus-datos-container select:focus-visible {
+  border: 2px solid #851a32;
+  outline: 0;
+}
+
+.step-form .elegi-productos-container {
+  margin-block: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.step-form .elegi-productos-container .solapas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.step-form .elegi-productos-container .solapas .solapa {
+  background-color: #1b2446;
+  color: white;
+  padding: .5rem 1rem;
+  line-height: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.step-form .elegi-productos-container .solapas .solapa.selected {
+  background-color: #851a32;
+}
+
+.step-form .elegi-productos-container .solapas .solapa:first-child {
+  border-top-left-radius: 100vmax;
+  border-bottom-left-radius: 100vmax;
+}
+
+.step-form .elegi-productos-container .solapas .solapa:last-child {
+  border-top-right-radius: 100vmax;
+  border-bottom-right-radius: 100vmax;
+}
+
+.step-form .elegi-productos-container .cantidades {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  margin-top: 1rem;
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+}
+
+.step-form .elegi-productos-container .cantidades .talles, .step-form .elegi-productos-container .cantidades .color {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 2.4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.step-form .elegi-productos-container .cantidades .talles p, .step-form .elegi-productos-container .cantidades .talles input, .step-form .elegi-productos-container .cantidades .color p, .step-form .elegi-productos-container .cantidades .color input {
+  margin-bottom: .5rem;
+}
+
+.step-form .elegi-productos-container .cantidades .talles p:not(.talle-nombre), .step-form .elegi-productos-container .cantidades .color p:not(.talle-nombre) {
+  font-weight: 900;
+  color: #851a32;
+}
+
+.step-form .elegi-productos-container .cantidades .talles p:not(.talle-nombre):not(.color-nombre), .step-form .elegi-productos-container .cantidades .color p:not(.talle-nombre):not(.color-nombre) {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.step-form .elegi-productos-container .cantidades .talles p.talle-nombre, .step-form .elegi-productos-container .cantidades .color p.talle-nombre {
+  color: transparent;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.step-form .elegi-productos-container .cantidades .talles input, .step-form .elegi-productos-container .cantidades .color input {
+  width: 100%;
+  max-width: 60px;
+  padding: .5rem;
+  padding-right: 0;
+  border: 2px solid #1b2446;
+  border-radius: 100vmax;
+  -moz-appearance: textfield;
+}
+
+.step-form .elegi-productos-container .cantidades .talles input::-webkit-outer-spin-button, .step-form .elegi-productos-container .cantidades .talles input::-webkit-inner-spin-button, .step-form .elegi-productos-container .cantidades .color input::-webkit-outer-spin-button, .step-form .elegi-productos-container .cantidades .color input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.step-form .elegi-productos-container .cantidades .talles input:focus, .step-form .elegi-productos-container .cantidades .talles input:active, .step-form .elegi-productos-container .cantidades .talles input:focus-visible, .step-form .elegi-productos-container .cantidades .color input:focus, .step-form .elegi-productos-container .cantidades .color input:active, .step-form .elegi-productos-container .cantidades .color input:focus-visible {
+  border: 2px solid #851a32;
+  outline: 0;
+}
+
+.step-form .elegi-productos-container .cantidades .talles .talle-nombre, .step-form .elegi-productos-container .cantidades .talles .color-nombre, .step-form .elegi-productos-container .cantidades .color .talle-nombre, .step-form .elegi-productos-container .cantidades .color .color-nombre {
+  font-weight: 800;
+  color: #1b2446;
+  border-bottom: 2px solid #1b2446;
+}
+
+.step-form .elegi-productos-container .totales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.5rem;
+  color: white;
+  line-height: 1;
+}
+
+.step-form .elegi-productos-container .totales .titulo, .step-form .elegi-productos-container .totales .valor {
+  padding: 1rem;
+}
+
+.step-form .elegi-productos-container .totales .titulo {
+  background-color: #851a32;
+  font-weight: 600;
+  border-top-left-radius: 100vmax;
+  border-bottom-left-radius: 100vmax;
+}
+
+.step-form .elegi-productos-container .totales .valor {
+  background-color: #1b2446;
+  font-weight: 900;
+  border-top-right-radius: 100vmax;
+  border-bottom-right-radius: 100vmax;
+  padding-inline: 2rem;
+}
+
+.step-form .prev-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.step-form .prev-next .next-step, .step-form .prev-next .prev-step {
+  margin-top: 1rem;
+  background-color: #1b2446;
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 100vmax;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+.step-form .prev-next .next-step:hover, .step-form .prev-next .prev-step:hover {
+  background-color: #851a32;
+}
+
+.step-form .prev-next .next-step.disabled, .step-form .prev-next .prev-step.disabled {
+  background-color: gray;
+  opacity: .5;
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=main.css.map */
