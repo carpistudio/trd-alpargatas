@@ -1,0 +1,68 @@
+[
+    {   
+        "nombre": "Alpargata común",
+        "id": "alpargata-comun",
+        "talles": [
+            { "talle": 34, "precio": 1000 },
+            { "talle": 35, "precio": 2000 },
+            { "talle": 36, "precio": 2000 },
+            { "talle": 37, "precio": 2000 },
+            { "talle": 38, "precio": 2000 },
+            { "talle": 39, "precio": 2000 }
+        ],
+        "colores": [
+            { "nombre": "Negro", "id": "negro", "sinstock": [] },
+            { "nombre": "Azul", "id": "azul", "sinstock": [] },
+            { "nombre": "Bordó", "id": "bordo", "sinstock": [36, 38] },
+            { "nombre": "Verde", "id": "verde", "sinstock": [34] },
+            { "nombre": "Blanco", "id": "blanco", "sinstock": [39] },
+            { "nombre": "Crudo", "id": "crudo", "sinstock": [38, 39] }
+        ]
+    },
+    {   
+        "nombre": "Alpargata premium",
+        "id": "alpargata-premium",
+        "talles": [
+            { "talle": 34, "precio": 2000 },
+            { "talle": 35, "precio": 2000 },
+            { "talle": 36, "precio": 2000 },
+            { "talle": 37, "precio": 2000 },
+            { "talle": 38, "precio": 2000 },
+            { "talle": 39, "precio": 2000 }
+        ],
+        "colores": [
+            { "nombre": "Negro", "id": "negro", "sinstock": [] },
+            { "nombre": "Azul", "id": "azul", "sinstock": [36, 38] },
+            { "nombre": "Bordó", "id": "bordo", "sinstock": [] },
+            { "nombre": "Blanco", "id": "blanco", "sinstock": [34] },
+            { "nombre": "Crudo", "id": "crudo", "sinstock": [] }
+        ]
+    },
+    {   
+        "nombre": "Ojota",
+        "id": "ojota",
+        "talles": [
+            { "talle": "19/20", "precio": 2000 },
+            { "talle": "21/22", "precio": 2000 },
+            { "talle": "23/24", "precio": 2000 },
+            { "talle": "25/26", "precio": 2000 },
+            { "talle": "27/28", "precio": 2000 },
+            { "talle": "29/30", "precio": 2000 },
+            { "talle": "31/32", "precio": 2000 },
+            { "talle": "33/34", "precio": 2000 },
+            { "talle": "35/36", "precio": 2000 },
+            { "talle": "37/38", "precio": 2000 },
+            { "talle": "39/40", "precio": 2000 },
+            { "talle": "41/42", "precio": 2000 },
+            { "talle": "43/44", "precio": 2000 },
+            { "talle": "45/46", "precio": 2000 }
+        ],
+        "colores": [
+            { "nombre": "Negro", "id": "negro", "sinstock": ["19/20", "23/24"] },
+            { "nombre": "Azul", "id": "azul", "sinstock": [] },
+            { "nombre": "Bordó", "id": "bordo", "sinstock": ["25/26"] },
+            { "nombre": "Verde", "id": "verde", "sinstock": ["41/42", "39/40"] },
+            { "nombre": "Blanco", "id": "blanco", "sinstock": [] }
+        ]
+    }
+]

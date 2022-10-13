@@ -72,7 +72,7 @@ main {
   text-align: center;
   gap: .5rem;
   border-radius: 1.2rem;
-  padding: 1.2rem 2rem;
+  padding: 1.2rem 1rem;
   background-color: white;
   position: relative;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -249,6 +249,10 @@ main {
   margin-top: 1rem;
 }
 
+.step-form .elegi-productos-container .cantidades.disabled {
+  display: none;
+}
+
 .step-form .elegi-productos-container .cantidades .talles, .step-form .elegi-productos-container .cantidades .color {
   display: -ms-grid;
   display: grid;
@@ -291,6 +295,13 @@ main {
   -webkit-appearance: textfield;
           appearance: textfield;
   -moz-appearance: textfield;
+  text-align: center;
+  padding-inline: .25rem;
+}
+
+.step-form .elegi-productos-container .cantidades .talles input:disabled, .step-form .elegi-productos-container .cantidades .color input:disabled {
+  background-color: #851a32;
+  border-color: #851a32;
 }
 
 .step-form .elegi-productos-container .cantidades .talles input::-webkit-outer-spin-button, .step-form .elegi-productos-container .cantidades .talles input::-webkit-inner-spin-button, .step-form .elegi-productos-container .cantidades .color input::-webkit-outer-spin-button, .step-form .elegi-productos-container .cantidades .color input::-webkit-inner-spin-button {
@@ -304,13 +315,17 @@ main {
   outline: 0;
 }
 
-.step-form .elegi-productos-container .cantidades .talles .talle-nombre, .step-form .elegi-productos-container .cantidades .talles .color-nombre, .step-form .elegi-productos-container .cantidades .color .talle-nombre, .step-form .elegi-productos-container .cantidades .color .color-nombre {
+.step-form .elegi-productos-container .cantidades .talles .talle-numero, .step-form .elegi-productos-container .cantidades .talles .color-nombre, .step-form .elegi-productos-container .cantidades .color .talle-numero, .step-form .elegi-productos-container .cantidades .color .color-nombre {
   font-weight: 800;
   color: #1b2446;
   font-size: .8rem;
   width: 6ch;
   margin-inline: auto;
   text-align: center;
+}
+
+.step-form .elegi-productos-container .cantidades .talles .color-nombre, .step-form .elegi-productos-container .cantidades .color .color-nombre {
+  border-bottom: 2px solid #1b2446;
 }
 
 .step-form .elegi-productos-container .totales {

@@ -51,7 +51,7 @@ main {
     text-align: center;
     gap: .5rem;
     border-radius: 1.2rem;
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 1rem;
     background-color: white;
     position: relative;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
@@ -185,6 +185,10 @@ main {
             column-gap: .25rem;
             margin-top: 1rem;
 
+            &.disabled {
+                display: none;
+            }
+
             .talles, .color {
                 display: grid;
                 grid-auto-flow: row;
@@ -220,6 +224,13 @@ main {
                     border-radius: 100vmax;
                     appearance: textfield;
                     -moz-appearance: textfield;
+                    text-align: center;
+                    padding-inline: .25rem;
+
+                    &:disabled {
+                        background-color: $red;
+                        border-color: $red;
+                    }
 
                     &::-webkit-outer-spin-button,
                     &::-webkit-inner-spin-button {
@@ -234,13 +245,17 @@ main {
                     }
                 }
 
-                .talle-nombre, .color-nombre {
+                .talle-numero, .color-nombre {
                     font-weight: 800;
                     color: $blue;
                     font-size: .8rem;
                     width: 6ch;
                     margin-inline: auto;
                     text-align: center;
+                }
+
+                .color-nombre {
+                    border-bottom: 2px solid $blue;
                 }
             }
         }
