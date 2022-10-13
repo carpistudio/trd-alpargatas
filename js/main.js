@@ -155,6 +155,16 @@ function productosFetched(productos) {
                 );
             }
             valorTotalContainer.innerHTML = "$ " + total;
+
+            let cantidadTotalContainer = document.querySelector("#step-3 .cantidad-total .cantidad");
+            let cantidadTotal = 0;
+            for(let i=0; i < allInputs.length; i++) {
+                cantidadTotal += parseInt
+                (
+                    allInputs[i].value * 1
+                )
+            cantidadTotalContainer.innerHTML = cantidadTotal;
+            }
         }
         calcularTotal();
 

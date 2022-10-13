@@ -6,8 +6,13 @@
           box-sizing: border-box;
 }
 
-html {
+html, h1, h2, h3, h4, h5, h6, p {
   font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
 
 .visually-hidden {
@@ -53,6 +58,25 @@ main {
 .main-form .logo {
   width: 10rem;
   max-width: 100%;
+}
+
+.main-form .splide {
+  background-color: white;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-form .splide .splide__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .step-form {
@@ -328,6 +352,16 @@ main {
   border-bottom: 2px solid #1b2446;
 }
 
+.step-form .elegi-productos-container .cantidad-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  color: #1b2446;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
 .step-form .elegi-productos-container .totales {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,7 +369,6 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 1.5rem;
   color: white;
   line-height: 1;
 }
@@ -346,14 +379,14 @@ main {
 
 .step-form .elegi-productos-container .totales .titulo {
   background-color: #851a32;
-  font-weight: 600;
+  font-weight: 700;
   border-top-left-radius: 100vmax;
   border-bottom-left-radius: 100vmax;
 }
 
 .step-form .elegi-productos-container .totales .valor {
   background-color: #1b2446;
-  font-weight: 900;
+  font-weight: 700;
   border-top-right-radius: 100vmax;
   border-bottom-right-radius: 100vmax;
   padding-inline: 2rem;
