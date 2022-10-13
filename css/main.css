@@ -241,13 +241,12 @@ main {
 }
 
 .step-form .elegi-productos-container .cantidades {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: .25rem;
+          column-gap: .25rem;
   margin-top: 1rem;
-  -webkit-column-gap: .5rem;
-          column-gap: .5rem;
 }
 
 .step-form .elegi-productos-container .cantidades .talles, .step-form .elegi-productos-container .cantidades .color {
@@ -258,6 +257,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  justify-items: center;
 }
 
 .step-form .elegi-productos-container .cantidades .talles p, .step-form .elegi-productos-container .cantidades .talles input, .step-form .elegi-productos-container .cantidades .color p, .step-form .elegi-productos-container .cantidades .color input {
@@ -285,7 +285,6 @@ main {
 .step-form .elegi-productos-container .cantidades .talles input, .step-form .elegi-productos-container .cantidades .color input {
   width: 100%;
   max-width: 60px;
-  padding: .5rem;
   padding-right: 0;
   border: 2px solid #1b2446;
   border-radius: 100vmax;
@@ -308,7 +307,10 @@ main {
 .step-form .elegi-productos-container .cantidades .talles .talle-nombre, .step-form .elegi-productos-container .cantidades .talles .color-nombre, .step-form .elegi-productos-container .cantidades .color .talle-nombre, .step-form .elegi-productos-container .cantidades .color .color-nombre {
   font-weight: 800;
   color: #1b2446;
-  border-bottom: 2px solid #1b2446;
+  font-size: .8rem;
+  width: 6ch;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .step-form .elegi-productos-container .totales {
