@@ -69,7 +69,7 @@ function loadSolapas(productos) {
 }
 
 
-const URL_PRODUCTOS = "../json/data.json";
+const URL_PRODUCTOS = "./json/data.json";
 const pedirProductos = async () => {
     const resp = await fetch(URL_PRODUCTOS);
     let productos = await resp.json();
