@@ -46,21 +46,6 @@ main {
         width: 10rem;
         max-width: 100%;
     }
-
-    .splide {
-        background-color: white;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        border-radius: 1.2rem;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0,0,0,.5);
-        max-width: 32rem;
-
-        .splide__slide {
-            display: flex;
-            align-items: center
-        }
-    }
 }
 
 .step-form {
@@ -75,6 +60,38 @@ main {
     background-color: white;
     position: relative;
     box-shadow: 0 0 10px rgba(0,0,0,.5);
+
+    &#step-3 .next-step {
+
+        &.disabled {
+            position: relative;
+
+            &::before {
+                content: 
+                    "Debés seleccionar al menos 50 unidades para continuar";
+                position: absolute;
+                opacity: 1;
+                font-size: .85rem;
+                left: -3rem;
+                right: -3rem;
+                top: -3rem;
+                color: white;
+                background-color: $red;
+                padding: .5rem;
+                border-radius: 100vmax;
+                opacity: 0;
+                z-index: -1;
+                transition: opacity .2s ease-in-out;
+            }
+
+            &:active::before,
+            &:hover::before,
+            &:focus::before {
+                opacity: 1;
+                z-index: 0;
+            }
+        }
+    }
 
     .step-number {
         position: absolute;
@@ -334,8 +351,7 @@ main {
             }
     
             &.disabled {
-                background-color: gray;
-                opacity: .5;
+                background-color: rgb(197, 197, 197);
                 cursor: not-allowed;
             }
         }

@@ -48,6 +48,25 @@ function checkStep2() {
 }
 checkStep2();
 
+mainForm.addEventListener("input", checkStep3);
+function checkStep3() {
+    let allInputs = document.querySelectorAll(".input-talle");
+    let totalUnidades = 0;
+    for(let i=0; i < allInputs.length; i++){
+        totalUnidades += parseInt
+        (
+            allInputs[i].value * 1
+        );
+    }
+    if (totalUnidades >= 50) {
+        document.querySelector("#step-3 .next-step").classList.remove("disabled");
+    } else {
+        document.querySelector("#step-3 .next-step").classList.add("disabled");
+    }
+
+}
+checkStep3();
+
 function loadSolapas(productos) {
     let solapas = document.querySelectorAll(".solapa");
     solapas.forEach(solapa => {
@@ -154,7 +173,7 @@ function productosFetched(productos) {
                     allInputs[i].getAttribute("data-precio")
                 );
             }
-            valorTotalContainer.innerHTML = "$ " + total;
+            valorTotalContainer.innerHTML = "$" + total;
 
             let cantidadTotalContainer = document.querySelector("#step-3 .cantidad-total .cantidad");
             let cantidadTotal = 0;

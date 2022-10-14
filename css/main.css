@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   margin: 0;
@@ -60,26 +61,6 @@ main {
   max-width: 100%;
 }
 
-.main-form .splide {
-  background-color: white;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 1.2rem;
-  overflow: hidden;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  max-width: 32rem;
-}
-
-.main-form .splide .splide__slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .step-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,6 +83,33 @@ main {
   position: relative;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.step-form#step-3 .next-step.disabled {
+  position: relative;
+}
+
+.step-form#step-3 .next-step.disabled::before {
+  content: "Debés seleccionar al menos 50 unidades para continuar";
+  position: absolute;
+  opacity: 1;
+  font-size: .85rem;
+  left: -3rem;
+  right: -3rem;
+  top: -3rem;
+  color: white;
+  background-color: #851a32;
+  padding: .5rem;
+  border-radius: 100vmax;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.step-form#step-3 .next-step.disabled:active::before, .step-form#step-3 .next-step.disabled:hover::before, .step-form#step-3 .next-step.disabled:focus::before {
+  opacity: 1;
+  z-index: 0;
 }
 
 .step-form .step-number {
@@ -417,8 +425,7 @@ main {
 }
 
 .step-form .prev-next .next-step.disabled, .step-form .prev-next .prev-step.disabled {
-  background-color: gray;
-  opacity: .5;
+  background-color: #c5c5c5;
   cursor: not-allowed;
 }
 /*# sourceMappingURL=main.css.map */
