@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html, h1, h2, h3, h4, h5, h6, p {
+html, h1, h2, h3, h4, h5, h6, p, button, input {
     font-family: 'Lato', sans-serif;
     margin: 0;
 }
@@ -332,11 +332,47 @@ main {
         }
     }
 
+    .detalles-pedido-container {
+
+        .numero-pedido {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            
+            p {
+                color: $red;
+
+                &.codigo-pedido {
+                    font-weight: 900;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .social {
+            color: $blue;
+
+            > div {
+                display: flex;
+                gap: .5rem;
+                justify-content: center;
+            }
+
+            a {
+                color: $blue;
+                text-decoration: none;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+
     .prev-next {
         display: flex;
         gap: 1rem;
 
-        .next-step, .prev-step {
+        .next-step, .prev-step, .end-step, .end-order {
             margin-top: 1rem;
             background-color: $blue;
             color: white;
@@ -345,6 +381,9 @@ main {
             line-height: 1;
             cursor: pointer;
             transition: background-color .2s;
+            text-decoration: none;
+            border: 0;
+            font-size: 1rem;
     
             &:hover {
                 background-color: $red;

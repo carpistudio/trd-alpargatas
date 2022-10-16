@@ -7,7 +7,7 @@
           box-sizing: border-box;
 }
 
-html, h1, h2, h3, h4, h5, h6, p {
+html, h1, h2, h3, h4, h5, h6, p, button, input {
   font-family: 'Lato', sans-serif;
   margin: 0;
 }
@@ -401,6 +401,43 @@ main {
   padding-inline: 2rem;
 }
 
+.step-form .detalles-pedido-container .numero-pedido {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-form .detalles-pedido-container .numero-pedido p {
+  color: #851a32;
+}
+
+.step-form .detalles-pedido-container .numero-pedido p.codigo-pedido {
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.step-form .detalles-pedido-container .social {
+  color: #1b2446;
+}
+
+.step-form .detalles-pedido-container .social > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.step-form .detalles-pedido-container .social a {
+  color: #1b2446;
+  text-decoration: none;
+}
+
+.step-form .detalles-pedido-container .social a:hover {
+  color: #851a32;
+}
+
 .step-form .prev-next {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,7 +445,7 @@ main {
   gap: 1rem;
 }
 
-.step-form .prev-next .next-step, .step-form .prev-next .prev-step {
+.step-form .prev-next .next-step, .step-form .prev-next .prev-step, .step-form .prev-next .end-step, .step-form .prev-next .end-order {
   margin-top: 1rem;
   background-color: #1b2446;
   color: white;
@@ -418,13 +455,16 @@ main {
   cursor: pointer;
   -webkit-transition: background-color .2s;
   transition: background-color .2s;
+  text-decoration: none;
+  border: 0;
+  font-size: 1rem;
 }
 
-.step-form .prev-next .next-step:hover, .step-form .prev-next .prev-step:hover {
+.step-form .prev-next .next-step:hover, .step-form .prev-next .prev-step:hover, .step-form .prev-next .end-step:hover, .step-form .prev-next .end-order:hover {
   background-color: #851a32;
 }
 
-.step-form .prev-next .next-step.disabled, .step-form .prev-next .prev-step.disabled {
+.step-form .prev-next .next-step.disabled, .step-form .prev-next .prev-step.disabled, .step-form .prev-next .end-step.disabled, .step-form .prev-next .end-order.disabled {
   background-color: #c5c5c5;
   cursor: not-allowed;
 }

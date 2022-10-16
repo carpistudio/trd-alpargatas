@@ -59,9 +59,9 @@ function checkStep3() {
         );
     }
     if (totalUnidades >= 50) {
-        document.querySelector("#step-3 .next-step").classList.remove("disabled");
+        document.querySelector("#step-3 .end-order").classList.remove("disabled");
     } else {
-        document.querySelector("#step-3 .next-step").classList.add("disabled");
+        document.querySelector("#step-3 .end-order").classList.add("disabled");
     }
 
 }
@@ -156,6 +156,9 @@ function productosFetched(productos) {
                 inputTalle.setAttribute("type", "number");
                 inputTalle.setAttribute("name", `${color.id}-${talle.talle}`);
                 inputTalle.setAttribute("data-precio", talle.precio);
+                inputTalle.setAttribute("data-color", color.nombre);
+                inputTalle.setAttribute("data-talle", talle.talle);
+                inputTalle.setAttribute("data-producto", producto.nombre)
                 columnaColor.appendChild(inputTalle);
             })
             grilla.appendChild(columnaColor);
@@ -174,6 +177,7 @@ function productosFetched(productos) {
                 );
             }
             valorTotalContainer.innerHTML = "$" + total;
+            document.querySelector("[name='valor-total']").value = "$" + total;
 
             let cantidadTotalContainer = document.querySelector("#step-3 .cantidad-total .cantidad");
             let cantidadTotal = 0;
@@ -183,6 +187,7 @@ function productosFetched(productos) {
                     allInputs[i].value * 1
                 )
             cantidadTotalContainer.innerHTML = cantidadTotal;
+            document.querySelector("[name='cantidad-total']").value = cantidadTotal;
             }
         }
         calcularTotal();
@@ -191,4 +196,59 @@ function productosFetched(productos) {
         grillaContainer.appendChild(grilla);
 
     })
+
+    let allInputs = document.querySelectorAll(".input-talle");
+    allInputs.forEach(input => {
+        input.addEventListener("input", guardarValores);
+    })
+    let productosAgregados = [];
+    function guardarValores(e) {
+        let producto = {
+            "producto": e.target.getAttribute("data-producto"),
+            "cantidad": e.target.value,
+            "nombre": e.target.getAttribute("name"),
+            "talle": e.target.getAttribute("data-talle"),
+            "color": e.target.getAttribute("data-color")
+        }
+        if (productosAgregados.some(e => e.nombre === producto.nombre)) {
+            const indexOfObject = productosAgregados.findIndex(object => {
+                return object.nombre === producto.nombre;
+            });
+            productosAgregados[indexOfObject].cantidad = e.target.value;
+        } else {
+            productosAgregados.push(producto);
+        }
+        if (e.target.value == 0 || e.target.value == "") {
+            const indexOfObject = productosAgregados.findIndex(object => {
+                return object.nombre === producto.nombre;
+            });
+            productosAgregados.splice(indexOfObject, 1);
+        }
+        localStorage.setItem("productos-agregados", JSON.stringify(productosAgregados));
+    }
+
+
+}
+
+mainForm.addEventListener("submit", submitForm);
+
+function submitForm() {
+    let numeroPedido = "TRD" + new Date().getFullYear() + Math.floor(100000 + Math.random() * 900000);
+    localStorage.setItem("numero-pedido", numeroPedido);
+    document.querySelector("[name='numero-pedido']").value = numeroPedido;
+
+    let productosFinales = localStorage.getItem("productos-agregados");
+    let productosFinalesInput = document.querySelector("[name='productos-finales']");
+    productosFinales = JSON.parse(productosFinales);
+    productosFinales.sort((a, b) => parseFloat(a.talle) - parseFloat(b.talle));
+    productosFinales.sort((a, b) => a.color.localeCompare(b.color));
+    productosFinales.sort((a, b) => a.producto.localeCompare(b.producto));
+    productosFinales.forEach(producto => {
+        let productoCompleto = `
+        <b>${producto.producto} - Color ${producto.color} - Talle ${producto.talle}</b>:
+        ${producto.cantidad > 1 ? producto.cantidad + " unidades" : producto.cantidad + " unidad"}.<br>
+        `;
+        productosFinalesInput.value += productoCompleto;
+    })
+
 }
